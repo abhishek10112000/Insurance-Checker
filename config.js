@@ -34,8 +34,8 @@ const CONFIG = {
     "70.1-75":   { ICICI: 52.5, Reliance: 47.5, BAJAJ: 37.5, TATA: 42.0 },
     "75.1-80":   { ICICI: 47.5, Reliance: 42.5, BAJAJ: 37.5, TATA: 42.0 },
     "80.1-85":   { ICICI: 42.5, Reliance: 37.5, BAJAJ: 37.5, TATA: 32.0 },
-    "85.1-87":   { ICICI: 33.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 32.0 },
-    "87.1-90":   { ICICI: 33.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 32.0 },
+    "85.1-87":   { ICICI: 37.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 32.0 },
+    "87.1-90":   { ICICI: 37.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 32.0 },
     "90.1-95":   { ICICI: 27.5, Reliance: 17.0, BAJAJ: 22.5, TATA: 32.0 },
     "95.1above": { ICICI: 27.5, Reliance: 17.0, BAJAJ: 22.5, TATA: 32.0 },
     "100":       { ICICI: 17.0, Reliance: 17.0, BAJAJ: 17.0, TATA: 17.0 }
@@ -47,8 +47,8 @@ const CONFIG = {
     "70.1-75":   { ICICI: 52.5, Reliance: 47.5, BAJAJ: 37.5, TATA: 17.0 },
     "75.1-80":   { ICICI: 47.5, Reliance: 42.5, BAJAJ: 37.5, TATA: 17.0 },
     "80.1-85":   { ICICI: 42.5, Reliance: 37.5, BAJAJ: 37.5, TATA: 17.0 },
-    "85.1-87":   { ICICI: 33.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 17.0 },
-    "87.1-90":   { ICICI: 33.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 17.0 },
+    "85.1-87":   { ICICI: 37.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 17.0 },
+    "87.1-90":   { ICICI: 37.5, Reliance: 32.5, BAJAJ: 37.5, TATA: 17.0 },
     "90.1-95":   { ICICI: 27.5, Reliance: 17.0, BAJAJ: 22.5, TATA: 17.0 },
     "95.1above": { ICICI: 27.5, Reliance: 17.0, BAJAJ: 22.5, TATA: 17.0 },
     "100":       { ICICI: 17.0, Reliance: 17.0, BAJAJ: 17.0, TATA: 17.0 }
