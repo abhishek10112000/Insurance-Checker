@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MB Hyderabad Insurance Priority Checker" />
+  <title>MB Hyd — Insurance Priority Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Logo bar -->
+  <div class="logo-bar" role="banner">
+    <!-- Mercedes-Benz three-pointed star (inline SVG, no external dep) -->
+    <svg class="mb-logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-label="Mercedes-Benz logo">
+      <circle cx="50" cy="50" r="48" fill="none" stroke="#a8a8a8" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="44" fill="none" stroke="#3a3a3a" stroke-width="0.5"/>
+      <!-- Three-pointed star -->
+      <g fill="#c8a96e">
+        <!-- top point -->
+        <polygon points="50,8 54.5,46 45.5,46"/>
+        <!-- bottom-right point -->
+        <polygon points="85,70 51.5,49 47,57.5"/>
+        <!-- bottom-left point -->
+        <polygon points="15,70 53,49 49,57.5"/>
+        <!-- center disc -->
+        <circle cx="50" cy="50" r="5"/>
+      </g>
+    </svg>
+
+    <div class="logo-text">
+      <span class="brand">Mercedes-Benz</span>
+      <span class="location">Hyderabad · Insurance Priority</span>
+    </div>
+  </div>
+
+  <!-- Main card -->
+  <main class="card" role="main">
+
+    <!-- Header -->
+    <div class="card-header">
+      <h1 class="card-title">Insurance Priority Checker</h1>
+      <p class="card-subtitle">Payout ranking by discount slab</p>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+
+      <!-- Slab dropdown -->
+      <div class="control-group">
+        <label class="control-label" for="slab-select">Discount slab</label>
+        <select id="slab-select" aria-label="Select discount slab">
+          <!-- Populated by app.js from config.js -->
+        </select>
+      </div>
+
+      <!-- Vehicle type toggle -->
+      <div class="control-group">
+        <span class="control-label" id="vtype-label">Vehicle type</span>
+        <div class="toggle-wrap" role="group" aria-labelledby="vtype-label">
+          <button class="toggle-btn active" id="vtype-ice" aria-pressed="true">ICE</button>
+          <button class="toggle-btn"        id="vtype-ev"  aria-pressed="false">EV</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Results -->
+    <div class="results">
+      <table class="results-table" aria-live="polite" aria-label="Insurance priority rankings">
+        <thead>
+          <tr>
+            <th scope="col">Priority</th>
+            <th scope="col">Company</th>
+            <th scope="col" style="text-align:right;">Payout</th>
+          </tr>
+        </thead>
+        <tbody id="results-body">
+          <!-- Populated by app.js -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer">
+      <span class="footer-month" id="month-label">—</span>
+      <span class="footer-note">Edit config.js to update payouts</span>
+    </div>
+
+  </main>
+
+  <!-- config.js MUST load before app.js -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

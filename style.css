@@ -1,0 +1,366 @@
+/* ═══════════════════════════════════════════════════════
+   MB Hyd Insurance Priority Checker — Styles
+   Mercedes-Benz inspired: obsidian, silver, white space
+   ═══════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@300;400;500;600&display=swap');
+
+/* ── Reset & base ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --obsidian:   #0a0a0a;
+  --carbon:     #1a1a1a;
+  --graphite:   #2e2e2e;
+  --steel:      #6b6b6b;
+  --silver:     #a8a8a8;
+  --platinum:   #d4d4d4;
+  --pearl:      #f5f5f3;
+  --white:      #ffffff;
+  --gold:       #c8a96e;
+  --gold-light: #e8d5a8;
+
+  --font-display: 'EB Garamond', Georgia, serif;
+  --font-ui:      'Inter', -apple-system, sans-serif;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  --transition: 0.2s ease;
+}
+
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--font-ui);
+  font-weight: 400;
+  background: var(--obsidian);
+  color: var(--white);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 1rem 3rem;
+}
+
+/* ── Logo bar ──────────────────────────────────────────── */
+.logo-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 2.5rem;
+}
+
+.mb-logo {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text .brand {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+.logo-text .location {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  color: var(--silver);
+  text-transform: uppercase;
+  margin-top: 3px;
+}
+
+/* ── Card ──────────────────────────────────────────────── */
+.card {
+  background: var(--carbon);
+  border: 0.5px solid var(--graphite);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 580px;
+  overflow: hidden;
+}
+
+/* ── Card header ───────────────────────────────────────── */
+.card-header {
+  padding: 1.75rem 2rem 1.5rem;
+  border-bottom: 0.5px solid var(--graphite);
+  position: relative;
+}
+
+.card-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 2rem; right: 2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.5;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.card-subtitle {
+  font-size: 11px;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* ── Controls ──────────────────────────────────────────── */
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  padding: 1.5rem 2rem;
+  border-bottom: 0.5px solid var(--graphite);
+}
+
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver);
+}
+
+.control-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--graphite) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23a8a8a8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+  border: 0.5px solid #3a3a3a;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  height: 42px;
+  padding: 0 36px 0 12px;
+  cursor: pointer;
+  transition: border-color var(--transition);
+  width: 100%;
+}
+
+.control-group select:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.control-group select option {
+  background: var(--carbon);
+}
+
+/* ── Toggle (ICE / EV) ─────────────────────────────────── */
+.toggle-wrap {
+  display: flex;
+  background: var(--graphite);
+  border: 0.5px solid #3a3a3a;
+  border-radius: var(--radius-sm);
+  height: 42px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  flex: 1;
+  border: none;
+  background: transparent;
+  color: var(--silver);
+  font-family: var(--font-ui);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition);
+  position: relative;
+}
+
+.toggle-btn.active {
+  background: var(--obsidian);
+  color: var(--white);
+  font-weight: 500;
+}
+
+.toggle-btn.active::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 20%; right: 20%;
+  height: 1.5px;
+  background: var(--gold);
+  border-radius: 1px;
+}
+
+/* ── Results table ─────────────────────────────────────── */
+.results {
+  padding: 0 2rem 1.5rem;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.25rem;
+}
+
+.results-table thead tr {
+  border-bottom: 0.5px solid var(--graphite);
+}
+
+.results-table thead th {
+  padding: 0 0 10px;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--steel);
+  text-align: left;
+}
+
+.results-table thead th:last-child {
+  text-align: right;
+}
+
+.results-table tbody tr {
+  border-bottom: 0.5px solid #222;
+  transition: background var(--transition);
+}
+
+.results-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.results-table tbody tr:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.results-table tbody td {
+  padding: 14px 0;
+  font-size: 14px;
+  color: var(--platinum);
+  vertical-align: middle;
+}
+
+/* Priority cell */
+.cell-priority {
+  width: 110px;
+}
+
+.priority-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.priority-tag .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--graphite);
+  flex-shrink: 0;
+}
+
+tr.rank-1 .priority-tag { color: var(--gold); }
+tr.rank-1 .priority-tag .dot { background: var(--gold); }
+tr.rank-2 .priority-tag .dot { background: var(--silver); }
+tr.rank-3 .priority-tag .dot { background: var(--steel); }
+tr.rank-4 .priority-tag .dot { background: var(--graphite); }
+
+/* Company cell */
+.cell-company {
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--white);
+}
+
+tr.rank-1 .cell-company {
+  font-weight: 500;
+}
+
+/* Payout cell */
+.cell-payout {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  color: var(--platinum);
+}
+
+tr.rank-1 .cell-payout {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+/* ── Footer ────────────────────────────────────────────── */
+.card-footer {
+  padding: 1rem 2rem;
+  border-top: 0.5px solid var(--graphite);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-month {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+
+.footer-note {
+  font-size: 10px;
+  color: var(--steel);
+  letter-spacing: 0.05em;
+}
+
+/* ── Responsive ────────────────────────────────────────── */
+@media (max-width: 480px) {
+  body { padding: 1.5rem 0.75rem 2rem; }
+
+  .logo-bar { margin-bottom: 1.75rem; }
+  .mb-logo { width: 44px; height: 44px; }
+  .logo-text .brand { font-size: 17px; }
+
+  .card-header { padding: 1.25rem 1.25rem 1.25rem; }
+  .card-title { font-size: 19px; }
+
+  .controls { padding: 1.25rem; gap: 10px; }
+  .results { padding: 0 1.25rem 1.25rem; }
+  .card-footer { padding: 0.875rem 1.25rem; flex-direction: column; gap: 4px; align-items: flex-start; }
+
+  .cell-payout { font-size: 16px; }
+  tr.rank-1 .cell-payout { font-size: 18px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; }
+}
