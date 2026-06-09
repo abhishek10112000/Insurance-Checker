@@ -6,7 +6,7 @@
 (function () {
 
   // ── State ──────────────────────────────────────────────
-  let selectedSlab  = CONFIG.slabs[5].key;   // default: 87.5-90.5
+  let selectedSlab  = CONFIG.slabs[5].key;   // default: 87.1-90
   let selectedVtype = "ICE";
 
   // ── DOM refs ───────────────────────────────────────────
